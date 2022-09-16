@@ -5,7 +5,7 @@ class LoginUser{
 	private $password;
 	public $error;
 	public $success;
-	private $storage = "resources/users.json";
+	private $storage = "./resources/users.json";
 	private $stored_users;
 
 	// class methods
@@ -23,7 +23,7 @@ class LoginUser{
 				if(password_verify($this->password, $user['password'])){
 					session_start();
 					$_SESSION['user'] = $this->username;
-					header("location: dashboard.php"); 
+					header("location: ././src/dashboard.php"); 
 					exit();
 				}
 			}

@@ -1,6 +1,6 @@
 <?php
 
-    require("loginController.php");
+    require("./src/library/loginController.php");
 
 	if(isset($_POST['submit'])){
 		$user = new LoginUser($_POST['username'], $_POST['password']);
