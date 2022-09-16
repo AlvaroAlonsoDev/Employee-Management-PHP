@@ -1,12 +1,10 @@
+<!-- TODO Application entry point. Login view -->
+<?php require("register.class.php") ?>
 <?php
-
-    require("loginController.php");
-
 	if(isset($_POST['submit'])){
-		$user = new LoginUser($_POST['username'], $_POST['password']);
+		$user = new RegisterUser($_POST['username'], $_POST['password']);
 	}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,7 +38,7 @@
                 <div class="text-end">
                     <img src="resources/img/lgo.png" width="40px" alt="Logo" />
                 </div>
-                <h2 class="fw-bold text-center py-5">Log in</h2>
+                <h2 class="fw-bold text-center py-5">Register</h2>
 
                 <!-- LOGIN -->
                 <form action="" id="form_login" method="POST">
@@ -52,22 +50,12 @@
                         <label for="txt_pass" class="form-label">Password</label>
                         <input type="password" class="form-control" name="password" id="txt_pass" />
                     </div>
-                    <div class="mb-4 form-check">
-                        <input type="checkbox" name="connected" class="form-check-input" id="" />
-                        <label for="connected" class="form-check-label">Remember me</label>
-                    </div>
                     <div class="d-grid">
-                        <button type="submit" name="submit" value="submit" class="btn btn-primary">Log in</button>
+                        <button type="submit" name="submit" class="btn btn-primary">Register</button>
                     </div>
 					<p class="error"><?php echo @$user->error ?></p>
 					<p class="success"><?php echo @$user->success ?></p>
-                    <div class="my-3">
-                        <span>You do not have an account?
-                            <a href="#">create one now</a></span>
-                    </div>
-                    <div class="my-3">
-                        <span><a href="">Have you forgotten your password?</a></span>
-                    </div>
+                    
                 </form>
 
                 <!-- LOGIN CON REDES SOCIALES -->
