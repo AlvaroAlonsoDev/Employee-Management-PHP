@@ -1,1 +1,1 @@
-<!-- Check how many time still active the account -->
+Check how many time still active the account
