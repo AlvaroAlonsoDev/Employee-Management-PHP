@@ -28,7 +28,7 @@ class LoginUser{
 				}
 			}
 		}
-		return $this->error = "Wrong username or password";
+		return $this->error = "Invalid email or password. Please try again";
 	}
 
 }

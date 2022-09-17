@@ -17,14 +17,13 @@
     <title>Login Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
-
     <style>
         body {
             /* color: #ffffff; */
-            background: #1e2126;
+            background: #fbfbfd;
             /* background: linear-gradient(to right, #16191c, #1e2126) */
         }
-		
+
         .bg {
             background-image: url(resources/img/imagen123.jpg);
             background-position: center center;
@@ -44,11 +43,11 @@
 
                 <!-- LOGIN -->
                 <form action="" id="form_login" method="POST">
-                    <div class="mb-4">
+                    <div class="mb-4 user-box">
                         <label for="txt_user" class="form-label">User</label>
                         <input type="text" class="form-control" name="username" id="txt_user" />
                     </div>
-                    <div class="mb-4">
+                    <div class="mb-4 user-box">
                         <label for="txt_pass" class="form-label">Password</label>
                         <input type="password" class="form-control" name="password" id="txt_pass" />
                     </div>
@@ -59,8 +58,12 @@
                     <div class="d-grid">
                         <button type="submit" name="submit" value="submit" class="btn btn-primary">Log in</button>
                     </div>
-					<p class="error"><?php echo @$user->error ?></p>
-					<p class="success"><?php echo @$user->success ?></p>
+                    <p class="error" style="color:red">
+                        <?php echo @$user->error ?>
+                    </p>
+                    <p class="success">
+                        <?php echo @$user->success ?>
+                    </p>
                     <div class="my-3">
                         <span>You do not have an account?
                             <a href="#">create one now</a></span>
@@ -107,7 +110,7 @@
                 <a href="/"
                     class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
                     <svg class="bi me-2" width="40" height="32">
-						<img src="resources/img/lgo.png" width="30"alt="Logo">
+                        <img src="resources/img/lgo.png" width="30" alt="Logo">
                     </svg>
                 </a>
 
@@ -135,7 +138,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script>
-	<script src="assets/js/index.js"></script>
+    <script src="assets/js/index.js"></script>
 </body>
 
 </html>
