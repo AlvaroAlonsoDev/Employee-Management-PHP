@@ -31,5 +31,4 @@ class LoginUser{
 
 		return $this->error = "Invalid email or password. Please try again";	
 	}
-
 }
