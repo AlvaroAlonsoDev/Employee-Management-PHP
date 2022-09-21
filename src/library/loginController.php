@@ -3,8 +3,8 @@ class LoginUser{
 	// class properties
 	private $username;
 	private $password;
-	public $error;
-	public $success;
+	public  $error;
+	// public $success;
 	private $storage = "./resources/users.json";
 	private $stored_users;
 
@@ -28,7 +28,16 @@ class LoginUser{
 				}
 			}
 		}
-
-		return $this->error = "Invalid email or password. Please try again";	
+		return $this->error = 
+			"
+			<script type='text/javascript'></script>
+			<script src='assets/js/index.js'></script>
+			<script type='text/javascript'>
+			displayAlert('error','Oops...','Invalid email or password. Please try again');
+			</script>
+			<p style='color:red';>Invalid email or password. Please try again</p>
+			"
+		;	
 	}
 }
+?>
