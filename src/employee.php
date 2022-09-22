@@ -9,6 +9,15 @@
         unset($_SESSION['user']);
 		header("location: ../index.php");	exit();
 	}
+    if(isset($_POST['edit'])){
+        echo '<script>console.log("TE EDITO GUAPO")</script>';
+        
+    }
+    if(isset($_POST['delete'])){
+        echo '<script>console.log("TE BORRO POR TONTO")</script>';
+        
+        // deleteEmployee();
+    }
 
     $user = [];
     $userID = $_SERVER['QUERY_STRING'];
@@ -56,7 +65,7 @@
 
                 <div class="col-md-3 text-end">
                     <a href="http://localhost/assembler/Employee-Management-PHP/src/dashboard.php"    
-                        <button id="btnLogout" type="button" class="btn btn-secondary">Go Back</button>
+                        <button id="btnLogout" type="button" class="btn btn-info">Go Back</button>
                     </a>
                 </div>
             </header>
@@ -78,8 +87,10 @@
                                         <?php echo $user['city'] . ', ' . $user['streetAddress'] . ', ' . $user['state']?>
                                     </p>
                                     <div class="d-flex justify-content-center mb-2">
-                                        <button type="button" class="btn btn-primary">Follow</button>
-                                        <button type="button" class="btn btn-outline-primary ms-1">Message</button>
+                                        <form method="post">
+                                            <input type="submit" name="edit" value="Edit" class="btn btn-success">
+                                            <input type="submit" name="delete" value="Delete" class="btn btn-danger ms-1">
+                                        </form>
                                     </div>
                                 </div>
                             </div>

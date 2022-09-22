@@ -16,7 +16,7 @@ function logoutUser() {
 }
 
 function displayEmployeePage(idUser){
-    console.log(idUser);
+    
     window.location.href = 'employee.php?' + idUser + '';
 }
 
@@ -38,7 +38,7 @@ function renderAllEmployees(employees){
         const tableBody = document.getElementById("tbody");
 
         for (let i = 0; i < employees.length; i++){
-
+            
             // console.log(employees[i]);          
 
             let tableRow = document.createElement("tr");
@@ -56,6 +56,11 @@ function renderAllEmployees(employees){
                 </td>
                 <td>
                     ${employees[i].age}
+                </td>
+                <td>
+                    <button type="button" class="btn btn-outline-success">
+                        <i class="fa-solid fa-user-pen"></i>
+                    </button>
                 </td>
             </tr>
             `

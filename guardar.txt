@@ -1,27 +1,6 @@
-<?php
-    $json_employees = file_get_contents("../resources/employees.json");
-    $employees = json_decode($json_employees, true);
-
-    if(count($employees) != 0){
-        foreach ($employees as $employee) {
-            ?>
-    <tr class="tablaMain" onclick="displayEmployeePage(<?php echo $employee['id']; ?>)">
-        <td>
-            <?php echo $employee['name']; ?>
-        </td>
-        <td>
-            <?php echo $employee['lastName']; ?>
-        </td>
-        <td>
-            <?php echo $employee['gender']; ?>
-        </td>
-        <td>
-            <?php echo $employee['age']; ?>
-        </td>
-    </tr>
-    <?php
-        }
-    }
-?>
-
-<tr class="tableMain" onclick="displayEmployeePage(${employees[i].id})"></tr>
+<button type="button" class="btn btn-outline-success">
+                        Edit
+                    </button>
+                    <button type="button" class="btn btn-outline-danger">
+                        Delete
+                    </button>  

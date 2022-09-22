@@ -8,24 +8,6 @@
 		unset($_SESSION['user']);
 		header("location: ../index.php");	exit();
 	}
-
-    // function saveEmployee(){
-    //     $json_employees = file_get_contents("../resources/employees.json");
-    //     $employees = json_decode($json_employees, true);
-
-    //     $new_employee = array(
-    //         'name' => $name,
-    //         'lastName' => $lastName
-    //     );
-
-    //     $employees[] = $new_employee;
-
-    //     $new_employees = json_encode($employees);
-        
-    //     if(file_put_contents("../resources/employees.json", $new_employees)){
-    //         echo "Swal.fire('Saved!', '', 'success')";
-    //     }
-    // }
 ?>
 
 
@@ -84,6 +66,7 @@
                         <th>Last Name</th>
                         <th>Gender</th>
                         <th>Age</th>
+                        <!-- <th></th> -->
                     </tr>
                 </thead>
                 <tbody id="tbody">
@@ -97,6 +80,7 @@
                         <th>Last Name</th>
                         <th>Office</th>
                         <th>Gender</th>
+                        <!-- <th></th> -->
                     </tr>
                 </tfoot>
             </table>
@@ -218,6 +202,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/137c893bad.js" crossorigin="anonymous"></script>
     <!-- JAVASCRIPT -->
     <script src="../assets/js/indosh.js"></script>
 
