@@ -7,12 +7,14 @@ function saveJson(){
 }
 
 function deleteEmployee($userID){
-    echo '<script>console.log("Te borre'.$userID.'")</script>';
+    echo '<script>console.log("Te borre id = '.$userID.'")</script>';
 
-//     $json_employees = file_get_contents("../resources/employees.json");
-//     $employees = json_decode($json_employees, true);
+    // $json_employees = file_get_contents("../resources/employees.json");
+    // $employees = json_decode($json_employees, true);
 
-//     unset($employees[$userID]);
+    // $key = array_search($employees, )
+
+    // $employees->deleteUser($userID);
 }
 
 

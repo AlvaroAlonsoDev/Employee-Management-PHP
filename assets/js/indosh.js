@@ -1,4 +1,4 @@
-console.log("hola estoy en el indox.js");
+console.log("Estoy en el indox.js");
 window.onload = loadAllEmployees();
 
 
@@ -21,7 +21,7 @@ function displayEmployeePage(idUser){
 }
 
 function loadAllEmployees() {
-    console.log("ESTOY EN LOADALLEMPLOYEES");
+    // console.log("ESTOY EN LOADALLEMPLOYEES");
 
     fetch("./library/employeeController.php?action=listEmployees", { method: "GET" })
         .then(response => response.json())
@@ -31,7 +31,7 @@ function loadAllEmployees() {
 }
 
 function renderAllEmployees(employees){
-    console.log("HOLA ESTOY EN EL RENDER");
+    // console.log("HOLA ESTOY EN EL RENDER");
     // console.log(employees);
 
     if(employees.length >= 0){

@@ -227,7 +227,7 @@
             $json_employees = file_get_contents("../resources/employees.json");
             $employees = json_decode($json_employees, true);
 
-            $id = (count($employees) + 1);
+            $id = (count($employees));
 
             $new_employee = array(
                 'id' => $id,
