@@ -30,7 +30,6 @@ class LoginUser{
 		}
 		return $this->error = 
 			"
-			<script type='text/javascript'></script>
 			<script src='assets/js/index.js'></script>
 			<script type='text/javascript'>
 			displayAlert('error','Oops...','Invalid email or password. Please try again');

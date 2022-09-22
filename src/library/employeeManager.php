@@ -1,8 +1,14 @@
 <?php
-$user = [];
-$userID = $_SERVER['QUERY_STRING'];
 
-require_once ("employeeController.php");
+
+function saveJson(){
+    $json_employees = file_get_contents("../../resources/employees.json");
+    return $json_employees;
+}
+
+
+
+
 
 
 

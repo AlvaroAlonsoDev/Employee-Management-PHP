@@ -10,7 +10,10 @@
 		header("location: ../index.php");	exit();
 	}
 
-    require_once ("./library/employeeManager.php")
+    $user = [];
+    $userID = $_SERVER['QUERY_STRING'];
+
+    require_once ("./library/employeeController.php");
 ?>
 
 <!DOCTYPE html>
@@ -52,7 +55,9 @@
                 </ul>
 
                 <div class="col-md-3 text-end">
-                    <button id="btnLogout" type="button" class="btn btn-secondary">Log out</button>
+                    <a href="http://localhost/assembler/Employee-Management-PHP/src/dashboard.php"    
+                        <button id="btnLogout" type="button" class="btn btn-secondary">Go Back</button>
+                    </a>
                 </div>
             </header>
         </div>
@@ -232,7 +237,7 @@
     <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
 
     <!-- JAVASCRIPT -->
-    <script src="../assets/js/indosh.js"></script>
+    <!-- <script src="../assets/js/indosh.js"></script> -->
 </body>
 
 </html>
