@@ -106,7 +106,7 @@
                                             <input type="text" class="form-control validate" name="name">
                                         </div>
                                         <div class="md-form mb-5 col">
-                                            <i class="fas fa-user prefix grey-text"></i>
+                                            <i class="fa-solid fa-signature"></i>
                                             <label data-error="wrong" data-success="right" for="orangeForm-name">Last
                                                 Name</label>
                                             <input type="text" class="form-control validate" name="lastName">
@@ -114,48 +114,48 @@
                                     </div>
                                     <div class="row">
                                         <div class="md-form mb-5 col">
-                                            <i class="fas fa-user prefix grey-text"></i>
+                                            <i class="fa-solid fa-at"></i>
                                             <label data-error="wrong" data-success="right" for="orangeForm-name">Email</label>
                                             <input type="text" class="form-control validate" name="email">
                                         </div>
                                         <div class="md-form mb-5 col">
-                                            <i class="fas fa-user prefix grey-text"></i>
+                                            <i class="fa-solid fa-city"></i>
                                             <label data-error="wrong" data-success="right" for="orangeForm-name">City</label>
                                             <input type="text" class="form-control validate" name="city">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="md-form mb-5 col">
-                                            <i class="fas fa-user prefix grey-text"></i>
+                                            <i class="fa-solid fa-map-pin"></i>
                                             <label data-error="wrong" data-success="right" for="orangeForm-name">Street Address</label>
                                             <input type="text" class="form-control validate" name="streetAddress">
                                         </div>
                                         <div class="md-form mb-5 col">
-                                            <i class="fas fa-user prefix grey-text"></i>
+                                            <i class="fa-solid fa-flag-usa"></i>
                                             <label data-error="wrong" data-success="right" for="orangeForm-name">State</label>
                                             <input type="text" class="form-control validate" name="state">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="md-form mb-5 col">
-                                            <i class="fas fa-user prefix grey-text"></i>
+                                            <i class="fa-brands fa-usps"></i>
                                             <label data-error="wrong" data-success="right" for="orangeForm-name">Postal Code</label>
                                             <input type="text" class="form-control validate" name="postalCode">
                                         </div>
                                         <div class="md-form mb-5 col">
-                                            <i class="fas fa-user prefix grey-text"></i>
+                                            <i class="fa-solid fa-mobile"></i>
                                             <label data-error="wrong" data-success="right" for="orangeForm-name">Phone Number</label>
                                             <input type="text" class="form-control validate" name="phoneNumber">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="md-form mb-5 col">
-                                            <i class="fas fa-user prefix grey-text"></i>
+                                            <i class="fa-solid fa-person"></i>
                                             <label data-error="wrong" data-success="right" for="orangeForm-name">Gender</label>
                                             <input type="text" class="form-control validate" name="gender">
                                         </div>
                                         <div class="md-form mb-5 col">
-                                            <i class="fas fa-user prefix grey-text"></i>
+                                            <i class="fa-solid fa-venus-mars"></i>
                                             <label data-error="wrong" data-success="right" for="orangeForm-name">Age</label>
                                             <input type="text" class="form-control validate" name="age">
                                         </div>

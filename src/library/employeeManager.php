@@ -6,52 +6,15 @@ function saveJson(){
     return $json_employees;
 }
 
+function deleteEmployee($userID){
+    echo '<script>console.log("Te borre'.$userID.'")</script>';
 
+//     $json_employees = file_get_contents("../resources/employees.json");
+//     $employees = json_decode($json_employees, true);
 
-
-
-
-
-/**
- * EMPLOYEE FUNCTIONS LIBRARY
- */
-
-// function addEmployee(array $newEmployee)
-// {
-// // TODO implement it
+//     unset($employees[$userID]);
 // }
 
 
-// function deleteEmployee(string $id)
-// {
-// // TODO implement it
-// }
 
 
-// function updateEmployee(array $updateEmployee)
-// {
-// // TODO implement it
-// }
-
-
-// function getEmployee(string $id)
-// {
-// // TODO implement it
-// }
-
-
-// function removeAvatar($id)
-// {
-// // TODO implement it
-// }
-
-
-// function getQueryStringParameters(): array
-// {
-// // TODO implement it
-// }
-
-// function getNextIdentifier(array $employeesCollection): int
-// {
-// // TODO implement it
-// }

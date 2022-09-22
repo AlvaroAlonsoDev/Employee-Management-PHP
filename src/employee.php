@@ -1,5 +1,10 @@
 <!-- TODO Main view or Employees Grid View here is where you get when logged here there's the grid of employees -->
 <?php 
+    $user = [];
+    $userID = $_SERVER['QUERY_STRING'];
+
+    require_once ("./library/employeeController.php");
+
 	session_start();
 	if(!isset($_SESSION['user'])){
         header("location: ../index.php");	exit();
@@ -14,15 +19,12 @@
         
     }
     if(isset($_POST['delete'])){
-        echo '<script>console.log("TE BORRO POR TONTO")</script>';
+        // echo '<script>console.log("TE BORRO POR TONTO")</script>';
         
-        // deleteEmployee();
+        deleteEmployee($userID);
     }
 
-    $user = [];
-    $userID = $_SERVER['QUERY_STRING'];
-
-    require_once ("./library/employeeController.php");
+    
 ?>
 
 <!DOCTYPE html>
