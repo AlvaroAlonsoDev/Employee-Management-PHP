@@ -64,7 +64,3 @@ function renderAllEmployees(employees){
     }
 }
 
-// * FUNCIONALIDAD EN LA TABLA
-// $(document).ready(function () {
-//     $('#example').DataTable();
-// });

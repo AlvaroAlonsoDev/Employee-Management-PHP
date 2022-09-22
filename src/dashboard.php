@@ -128,7 +128,7 @@
                                             <input type="text" class="form-control validate" name="lastName">
                                         </div>
                                     </div>
-                                    <!-- <div class="row">
+                                    <div class="row">
                                         <div class="md-form mb-5 col">
                                             <i class="fas fa-user prefix grey-text"></i>
                                             <label data-error="wrong" data-success="right" for="orangeForm-name">Email</label>
@@ -175,7 +175,7 @@
                                             <label data-error="wrong" data-success="right" for="orangeForm-name">Age</label>
                                             <input type="text" class="form-control validate" name="age">
                                         </div>
-                                    </div> -->
+                                    </div>
 
                             </div>
 
@@ -224,26 +224,37 @@
 <?php
 
     if(isset($_POST['submit'])){
-        
+            $id = '';
             $name = $_POST['name'];
             $lastName = $_POST['lastName'];
-    //         // $name = $_POST['email'];
-    //         // $name = $_POST['city'];
-    //         // $name = $_POST['streetAddress'];
-    //         // $name = $_POST['state'];
-    //         // $name = $_POST['postalCode'];
-    //         // $name = $_POST['phoneNumber'];
-    //         // $name = $_POST['gender'];
-    //         // $name = $_POST['age'];
+            $email = $_POST['email'];
+            $city = $_POST['city'];
+            $streetAddress = $_POST['streetAddress'];
+            $state = $_POST['state'];
+            $postalCode = $_POST['postalCode'];
+            $phoneNumber = $_POST['phoneNumber'];
+            $gender = $_POST['gender'];
+            $age = $_POST['age'];
 
             
 
             $json_employees = file_get_contents("../resources/employees.json");
             $employees = json_decode($json_employees, true);
 
+            $id = (count($employees) + 1);
+
             $new_employee = array(
+                'id' => $id,
                 'name' => $name,
-                'lastName' => $lastName
+                'lastName' => $lastName,
+                'email' => $email,
+                'city' => $city,
+                'streetAddress' => $streetAddress,
+                'state' => $state,
+                'postalCode' => $postalCode,
+                'phoneNumber' => $phoneNumber,
+                'gender' => $gender,
+                'age' => $age
             );
 
             $employees[] = $new_employee;
