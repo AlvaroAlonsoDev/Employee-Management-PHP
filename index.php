@@ -1,5 +1,4 @@
 <?php
-
     require("./src/library/loginController.php");
 
 	if(isset($_POST['submit'])){
@@ -17,17 +16,30 @@
     <title>Login Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <script src="assets/js/index.js"></script>
+
+    <!--  SWEET ALERT -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <style>
         body {
             /* color: #ffffff; */
-            background: #1e2126;
+            background: #fbfbfd;
             /* background: linear-gradient(to right, #16191c, #1e2126) */
         }
-		
+
         .bg {
             background-image: url(resources/img/imagen123.jpg);
             background-position: center center;
+        }
+
+        a:link,
+        a:visited,
+        a:active {
+            text-decoration: none;
+            color: #497fe5;
         }
     </style>
 </head>
@@ -36,19 +48,21 @@
     <div class="container w-75 mt-5 rounded shadow bg-white">
         <div class="row align-item-stretch">
             <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded"></div>
-            <div class="col bg-white p-5 rounded-end">
+            <div class="col bg-white p-5 rounded-end bgcolorcss">
                 <div class="text-end">
-                    <img src="resources/img/lgo.png" width="40px" alt="Logo" />
+                    <a href="http://localhost/assembler/Employee-Management-PHP/src/dashboard.php">
+                        <img src="resources/img/lgo.png" width="50px" alt="Logo" />
+                    </a>
                 </div>
                 <h2 class="fw-bold text-center py-5">Log in</h2>
 
                 <!-- LOGIN -->
                 <form action="" id="form_login" method="POST">
-                    <div class="mb-4">
+                    <div class="mb-4 user-box">
                         <label for="txt_user" class="form-label">User</label>
                         <input type="text" class="form-control" name="username" id="txt_user" />
                     </div>
-                    <div class="mb-4">
+                    <div class="mb-4 user-box">
                         <label for="txt_pass" class="form-label">Password</label>
                         <input type="password" class="form-control" name="password" id="txt_pass" />
                     </div>
@@ -57,17 +71,24 @@
                         <label for="connected" class="form-check-label">Remember me</label>
                     </div>
                     <div class="d-grid">
-                        <button type="submit" name="submit" value="submit" class="btn btn-primary">Log in</button>
+                        <button id="loginSubmit" type="submit" name="submit" value="submit" class="btn btn-primary">Log
+                            in</button>
                     </div>
-					<p class="error"><?php echo @$user->error ?></p>
-					<p class="success"><?php echo @$user->success ?></p>
-                    <div class="my-3">
-                        <span>You do not have an account?
-                            <a href="#">create one now</a></span>
-                    </div>
-                    <div class="my-3">
-                        <span><a href="">Have you forgotten your password?</a></span>
-                    </div>
+                    <div class="mt-2">
+
+                        <!-- MODAL ERROR -->
+                        <?php 
+                                echo @$user->error
+                            ?>
+
+                        <!-- FINISH -->
+                        <div class="my-3">
+                            <span>You do not have an account?
+                                <a href="#">create one now</a></span>
+                        </div>
+                        <div class="my-3">
+                            <span><a href="">Have you forgotten your password?</a></span>
+                        </div>
                 </form>
 
                 <!-- LOGIN CON REDES SOCIALES -->
@@ -100,14 +121,16 @@
                 </div>
             </div>
         </div>
-        <div class="container bg-white">
+
+        <!-- FOOTER -->
+        <div id="footer" class="container bg-white">
             <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
                 <p class="col-md-4 mb-0 text-muted">© 2022 Company, Inc</p>
 
                 <a href="/"
                     class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
                     <svg class="bi me-2" width="40" height="32">
-						<img src="resources/img/lgo.png" width="30"alt="Logo">
+                        <img src="resources/img/lgo.png" width="30" alt="Logo">
                     </svg>
                 </a>
 
@@ -135,7 +158,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script>
-	<script src="assets/js/index.js"></script>
 </body>
 
 </html>
