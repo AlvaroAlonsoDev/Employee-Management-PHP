@@ -10,7 +10,7 @@ function displayAlert(icon, title, text) {
 
 }
 
-function dispayAlertDelete(phpFunction) {
+function dispayAlertDelete() {
     Swal.fire({
         title: 'Are you sure?',
         text: "You won't be able to revert this!",
