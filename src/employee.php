@@ -1,7 +1,7 @@
 <!-- TODO Main view or Employees Grid View here is where you get when logged here there's the grid of employees -->
 <?php 
     $user = [];
-    $userID = $_SERVER['QUERY_STRING'];
+    $userID = $_GET['id'];
 
     require_once ("./library/employeeController.php");
 

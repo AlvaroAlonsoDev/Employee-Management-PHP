@@ -8,9 +8,9 @@
 		unset($_SESSION['user']);
 		header("location: ../index.php");	exit();
 	}
+
+    // require_once ("./library/employeeController.php");
 ?>
-
-
 
 <!doctype html>
 <html lang="en">
@@ -27,6 +27,8 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- EOOOOOOOOOOO JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -66,7 +68,7 @@
                         <th>Last Name</th>
                         <th>Gender</th>
                         <th>Age</th>
-                        <!-- <th></th> -->
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody id="tbody">
@@ -80,7 +82,7 @@
                         <th>Last Name</th>
                         <th>Office</th>
                         <th>Gender</th>
-                        <!-- <th></th> -->
+                        <th></th>
                     </tr>
                 </tfoot>
             </table>
@@ -208,40 +210,41 @@
     <script src="../assets/js/indosh.js"></script>
 
 <?php
-
+// * CREAR UN EMPLEADO
     if(isset($_POST['submit'])){
-            $id = '';
-            $name = $_POST['name'];
-            $lastName = $_POST['lastName'];
-            $email = $_POST['email'];
-            $city = $_POST['city'];
-            $streetAddress = $_POST['streetAddress'];
-            $state = $_POST['state'];
-            $postalCode = $_POST['postalCode'];
-            $phoneNumber = $_POST['phoneNumber'];
-            $gender = $_POST['gender'];
-            $age = $_POST['age'];
+        // * Generador de ID unico (Se basa en la hora exacta en la que estas)
+        $new_Id = uniqid();
+        echo '<script>console.log("'.$new_Id.'")</script>';
 
-            
+        $id = $new_Id;
+        $name = $_POST['name'];
+        $lastName = $_POST['lastName'];
+        $email = $_POST['email'];
+        $city = $_POST['city'];
+        $streetAddress = $_POST['streetAddress'];
+        $state = $_POST['state'];
+        $postalCode = $_POST['postalCode'];
+        $phoneNumber = $_POST['phoneNumber'];
+        $gender = $_POST['gender'];
+        $age = $_POST['age'];
+        
+        
+        $json_employees = file_get_contents("../resources/employees.json");
+        $employees = json_decode($json_employees, true);
 
-            $json_employees = file_get_contents("../resources/employees.json");
-            $employees = json_decode($json_employees, true);
-
-            $id = (count($employees));
-
-            $new_employee = array(
-                'id' => $id,
-                'name' => $name,
-                'lastName' => $lastName,
-                'email' => $email,
-                'city' => $city,
-                'streetAddress' => $streetAddress,
-                'state' => $state,
-                'postalCode' => $postalCode,
-                'phoneNumber' => $phoneNumber,
-                'gender' => $gender,
-                'age' => $age
-            );
+        $new_employee = array(
+            'id' => $id,
+            'name' => $name,
+            'lastName' => $lastName,
+            'email' => $email,
+            'city' => $city,
+            'streetAddress' => $streetAddress,
+            'state' => $state,
+            'postalCode' => $postalCode,
+            'phoneNumber' => $phoneNumber,
+            'gender' => $gender,
+            'age' => $age
+        );
 
             $employees[] = $new_employee;
 
@@ -263,6 +266,21 @@
             }
 
     }
+// * FIN CREAR EMPLEADO
+
+//  * FUNCIONALIDAD BOTONES
+    if(isset($_POST['delete'])){
+        echo '<script>dispayAlertDelete()</script>';
+        
+        deleteEmployee($userID);
+    }
+
+    if(isset($_POST['edit'])){
+        echo '<script>displayEmployeePage("'+$userID+'")</script>';
+
+    }
+    
+
 ?>
 </body>
 

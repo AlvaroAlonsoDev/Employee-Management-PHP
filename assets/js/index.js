@@ -21,7 +21,7 @@ function dispayAlertDelete() {
         confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
         if (result.isConfirmed) {
-            phpFunction;
+            location.href = './dashboard.php';
             Swal.fire(
                 'Deleted!',
                 'Your file has been deleted.',

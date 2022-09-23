@@ -1,6 +1,5 @@
 <?php
 
-
 function saveJson(){
     $json_employees = file_get_contents("../../resources/employees.json");
     return $json_employees;
@@ -27,7 +26,7 @@ function deleteEmployee($userID){
                 
             }
             // echo "<pre>";print_r($employees);echo "</pre>";
-            // header("LOCATION: dashboard.php");
+            
 
             break;
         }
@@ -36,6 +35,7 @@ function deleteEmployee($userID){
 
 }
 
+// ! Intenatar declarar la funcion de recoger el id del GET aqui y llamarla en el controller
 
 
 
