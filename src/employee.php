@@ -18,11 +18,7 @@
         echo '<script>console.log("TE EDITO GUAPO")</script>';
         
     }
-    if(isset($_POST['delete'])){
-        // echo '<script>console.log("TE BORRO POR TONTO")</script>';
-        
-        deleteEmployee($userID);
-    }
+    
 
     
 ?>
@@ -40,6 +36,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
     <script src="https://kit.fontawesome.com/137c893bad.js" crossorigin="anonymous"></script>
+    <!--  SWEET ALERT -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -250,7 +250,18 @@
     <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
 
     <!-- JAVASCRIPT -->
-    <!-- <script src="../assets/js/indosh.js"></script> -->
+    <script src="../assets/js/index.js"></script>
+
+    <!-- PHP -->
+    <?php 
+
+    if(isset($_POST['delete'])){
+        echo '<script>dispayAlertDelete()</script>';
+        
+        deleteEmployee($userID);
+    }
+    
+    ?>
 </body>
 
 </html>
