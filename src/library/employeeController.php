@@ -2,6 +2,10 @@
 
 include ("employeeManager.php");
 
+if(isset($_GET["action"]) && $_GET["action"] == "listEmployees"){
+    echo saveJson();
+}
+
     if(isset($userID)){
         // CALL THE JSON
         $json_employees = file_get_contents("../resources/employees.json");
@@ -15,12 +19,7 @@ include ("employeeManager.php");
         }
     }
     
-if(isset($_GET["action"]) && $_GET["action"] == "listEmployees"){
-    echo saveJson();
-}
 
-
-    
 
 
 

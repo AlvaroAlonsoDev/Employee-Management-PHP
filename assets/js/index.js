@@ -10,7 +10,7 @@ function displayAlert(icon, title, text) {
 
 }
 
-function dispayAlertDelete(phpFunction) {
+function dispayAlertDelete() {
     Swal.fire({
         title: 'Are you sure?',
         text: "You won't be able to revert this!",
@@ -21,7 +21,7 @@ function dispayAlertDelete(phpFunction) {
         confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
         if (result.isConfirmed) {
-            phpFunction;
+            location.href = './dashboard.php';
             Swal.fire(
                 'Deleted!',
                 'Your file has been deleted.',
