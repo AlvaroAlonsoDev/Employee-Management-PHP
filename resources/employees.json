@@ -102,18 +102,5 @@
         "state": "LU",
         "postalCode": "63281",
         "phoneNumber": "91232876454"
-    },
-    {
-        "id": 8,
-        "name": "Alvaro",
-        "lastName": "Irurita",
-        "email": "airurita@gmail.com",
-        "city": "Granada",
-        "streetAddress": "licenciad",
-        "state": "Espa\u00f1a",
-        "postalCode": "18008",
-        "phoneNumber": "654859575",
-        "gender": "man",
-        "age": "25"
     }
 ]
