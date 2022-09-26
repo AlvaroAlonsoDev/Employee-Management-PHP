@@ -54,6 +54,7 @@ function dispayAlertDelete() {
         }
     })
 }
+
 // !FUNCION EN PROCESO DE QUE FUNCIONE
 function dispayAlertDeleteAjax() {
     Swal.fire({
@@ -107,6 +108,9 @@ function renderAllEmployees(employees) {
             tableRow.className = "tablaMain";
             // tableRow.setAttribute("onclick", 'displayEmployeePage("'+employees[i].id+'")')
             tableRow.innerHTML = `
+                <td id="idEmployee"display="none">
+                    ${employees[i].id}
+                </td>
                 <td>
                     ${employees[i].name}
                 </td>
@@ -120,11 +124,11 @@ function renderAllEmployees(employees) {
                     ${employees[i].age}
                 </td>
                 <td>
-                    <form >
+                    <form method="post">
                         <button type="button" class="btn btn-outline-success" onclick="displayEmployeePage(${employees[i].id})">
                             <i class="fa-solid fa-user"></i>
                         </button>
-                        <button id="deleteBTN" type="button" class="btn btn-outline-danger" onclick="">
+                        <button id="deleteBTN" name="delete" type="submit" class="btn btn-outline-danger" onclick="">
                             <i class="fa-solid fa-trash"></i>
                         </button>
                     </form>

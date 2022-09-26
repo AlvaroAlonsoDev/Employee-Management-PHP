@@ -9,7 +9,7 @@
 		header("location: ../index.php");	exit();
 	}
 
-    // require_once ("./library/employeeController.php");
+    require_once ("./library/employeeController.php");
 ?>
 
 <!doctype html>
@@ -64,6 +64,7 @@
             <table id="example" class="table table-striped" style="width:100%">
                 <thead>
                     <tr>
+                        <th>ID</th>
                         <th>Name</th>
                         <th>Last Name</th>
                         <th>Gender</th>
@@ -78,6 +79,7 @@
                 </tbody>
                 <tfoot>
                     <tr>
+                        <th>ID</th>
                         <th>Name</th>
                         <th>Last Name</th>
                         <th>Office</th>
@@ -213,7 +215,8 @@
 // * CREAR UN EMPLEADO
     if(isset($_POST['submit'])){
         // * Generador de ID unico (Se basa en la hora exacta en la que estas)
-        $new_Id = uniqid();
+        // $new_Id = uniqid(); 
+        $new_Id = rand(0,99999);
         echo '<script>console.log("'.$new_Id.'")</script>';
 
         $id = $new_Id;
@@ -270,17 +273,12 @@
 
 //  * FUNCIONALIDAD BOTONES
     if(isset($_POST['delete'])){
-        echo '<script>dispayAlertDelete()</script>';
+        // header("location: ./employee.php");
         
-        deleteEmployee($userID);
+        echo '<script>dispayAlertDelete()</script>';
+
+        deleteEmployee(62339);
     }
-
-    if(isset($_POST['edit'])){
-        echo '<script>displayEmployeePage("'+$userID+'")</script>';
-
-    }
-    
-
 ?>
 </body>
 
